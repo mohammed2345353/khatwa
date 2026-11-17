@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0a1a">
+  <title>خُطوة | مختبر أساسيات البرمجة</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="خطوة - الصفحة الرئيسية"><span class="brand-icon">{·}</span><span><b>خُطوة</b><small>مختبر أساسيات البرمجة</small></span></a>
+      <div class="top-meta"><span class="live-dot"></span> 8 مفاهيم · مثالان لغويان</div>
+    </header>
+
+    <div class="layout">
+      <aside class="lesson-rail">
+        <div class="rail-heading"><span>المسار التعليمي</span><span class="rail-count">01 — 08</span></div>
+        <nav id="lessonNav" class="lesson-nav" aria-label="دروس البرمجة"></nav>
+        <div class="rail-foot"><span class="foot-glyph">◎</span><span>المفهوم البرمجي يبقى،<br>والصياغة تختلف من لغة للثانية.</span></div>
+      </aside>
+
+      <main class="lesson-workspace">
+        <section class="lesson-heading">
+          <div class="heading-copy"><div class="eyebrow" id="lessonGroup">أساسيات البرمجة</div><h1 id="lessonTitle"></h1><p id="lessonSub"></p></div>
+          <div class="progress-box"><span id="progressText"></span><div class="progress-track"><i id="progressBar"></i></div></div>
+        </section>
+
+        <div class="work-grid">
+          <section class="code-card panel">
+            <div class="card-header"><div><b>الكود</b><small>السطر المضيء هو الخطوة الحالية</small></div><div class="language-switch" role="group" aria-label="لغة المثال"><button class="lang active" data-lang="python">Python</button><button class="lang" data-lang="js">JavaScript</button></div></div>
+            <div class="editor-window"><div class="editor-bar"><span class="traffic"><i></i><i></i><i></i></span><span id="filename">lesson.py</span><span class="editor-spacer"></span><span class="editor-label">مثال تعليمي</span></div><div class="code-content" id="codeContent" dir="ltr"></div></div>
+            <div class="concept-note"><span class="note-icon">✳</span><p id="conceptNote"></p></div>
+            <div class="control-row">
+              <button id="playBtn" class="btn btn-play">▶ <span>شغّل الحركة</span></button>
+              <button id="stepBtn" class="btn btn-soft">خطوة تالية <span>⏭</span></button>
+              <button id="resetBtn" class="btn btn-icon" title="إعادة الدرس">↺</button>
+              <label class="speed-control">السرعة<select id="speed"><option value="1700">هادئة</option><option value="1050" selected>عادية</option><option value="550">سريعة</option></select></label>
+            </div>
+          </section>
+
+          <section class="visual-card panel">
+            <div class="card-header visual-header"><div><b>شوف شنو يصير</b><small id="visualSub">المشهد يتحرك مع تنفيذ الكود</small></div><span class="run-state" id="runState">جاهز</span></div>
+            <div class="stage" id="stage" aria-live="polite"></div>
+            <div class="stage-bottom"><p id="stepExplanation"></p><div class="stage-meta"><span id="stepCounter"></span><span class="step-track" id="stepTrack"></span></div></div>
+          </section>
+        </div>
+
+        <section class="flow-strip">
+          <div class="flow-copy"><span class="flow-spark">✦</span><div><b>حوّل الدرس إلى فكرة مشهد</b><small>برومبت مرتب تقدر تنسخه إلى Google Flow</small></div></div>
+          <button class="btn btn-flow" id="flowBtn">جهّز برومبت Flow <span>↗</span></button>
+        </section>
+        <section class="prompt-card" id="promptCard" hidden><div class="prompt-top"><div><b>برومبت المشهد</b><small>مبني على خطوات الدرس والقيم الحالية</small></div><button id="copyBtn" class="btn btn-soft">نسخ</button></div><pre id="promptText"></pre></section>
+        <footer class="lesson-footer"><span>الفكرة مشتركة بين لغات كثيرة؛ المثال هنا يوضحها بصياغة Python أو JavaScript.</span><span class="creator-credit">تم إنشاء الموقع بواسطة المهندس محمد رشيد حميد · <a href="https://www.instagram.com/m7.ai.g/" target="_blank" rel="noopener noreferrer" aria-label="حساب إنستغرام المهندس محمد رشيد حميد: @m7.ai.g">@m7.ai.g</a></span><span>خُطوة <i>·</i> مختبر بصري</span></footer>
+      </main>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
