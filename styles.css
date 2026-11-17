@@ -240,6 +240,6 @@ body{transition:background-color .25s,color .25s}
 .language-switch{flex-wrap:nowrap;max-width:100%;overflow-x:auto}
 
 /* خلفية: رسم من Gemini (حجارة خطوات صاعدة)، خافتة وتتبع لون الثيم */
-body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:url(bg.webp) center/cover no-repeat;opacity:.7;mix-blend-mode:multiply}
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:url(bg.webp) center/cover no-repeat;opacity:.5;mix-blend-mode:multiply}
 :root[data-theme="night"] body::before{filter:invert(1);opacity:.08;mix-blend-mode:screen}
 .app-shell{position:relative}
