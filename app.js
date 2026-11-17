@@ -73,7 +73,9 @@ const lessons = [
   }
 ];
 
-let current = lessons[0], stepIndex = 0, language = 'python', timer = null, grade = 82, userName = 'Sara';
+const NAMES=['Sara','Omar','Lina','Adam','Maya','Noah','Zain','Layla','Yusuf','Nora','Ryan','Hana','Karim','Dina','Sami','Rima','Jad','Tala','Ziad','Mia'];
+const randomName=()=>NAMES[Math.floor(Math.random()*NAMES.length)];
+let current = lessons[0], stepIndex = 0, language = 'python', timer = null, grade = 82, userName = randomName();
 const labState = { operandA: 6, operandB: 4, threshold: 8, loopLimit: 3, functionInput: 5, listValues: [4, 9, 2, 7], listIndex: 2 };
 function getSteps(){
   if(current.id==='for'){
@@ -137,7 +139,7 @@ function renderScene(step){
   const bindNumber=(id,key,min=0,max=99)=>{const input=$(id);if(input)input.onchange=()=>{const value=Number(input.value);if(Number.isFinite(value)){labState[key]=Math.min(max,Math.max(min,value));stepIndex=0;render()}}};
   bindNumber('operandA','operandA',0,99);bindNumber('operandB','operandB',0,99);bindNumber('threshold','threshold',0,99);bindNumber('loopLimit','loopLimit',1,6);bindNumber('functionInput','functionInput',0,99);
   const listApply=$('listApply');if(listApply)listApply.onclick=()=>{const parsed=$('listValuesInput').value.split(',').map(v=>Number(v.trim()));const nextIndex=Number($('listIndexInput').value);if(parsed.length===4&&parsed.every(v=>Number.isFinite(v))&&Number.isInteger(nextIndex)&&nextIndex>=0&&nextIndex<=3){labState.listValues=parsed.map(v=>Math.max(-99,Math.min(999,v)));labState.listIndex=nextIndex;stepIndex=0;render()}else{$('toast').textContent='أدخل أربعة أعداد وفهرسًا من 0 إلى 3';$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2200)}};
-  const nameApply=$('nameApply');if(nameApply)nameApply.onclick=()=>{userName=$('nameInput').value.trim()||'Sara';render()};
+  const nameApply=$('nameApply');if(nameApply)nameApply.onclick=()=>{userName=$('nameInput').value.trim()||randomName();render()};
 }
 function stopPlayback(){if(timer){clearInterval(timer);timer=null}document.body.classList.remove('is-playing');$('playBtn').innerHTML='▶ <span>شغّل الحركة</span>';}
 function nextStep(){const steps=getSteps();if(stepIndex<steps.length-1){stepIndex++;render()}else{$('runState').textContent='اكتمل المثال'}}

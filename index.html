@@ -15,7 +15,7 @@
   <div class="app-shell">
     <header class="topbar">
       <a class="brand" href="#" aria-label="خطوة - الصفحة الرئيسية"><span class="brand-icon">خ</span><span><b>خُطوة</b><small>مختبر أساسيات البرمجة</small></span></a>
-      <div class="top-meta">8 مفاهيم · 4 لغات</div>
+      <div class="top-tools"><div class="top-meta">8 مفاهيم · 4 لغات</div><div class="themes" id="themes" role="group" aria-label="ألوان الموقع"><button class="swatch" type="button" data-pick="paper"></button><button class="swatch" type="button" data-pick="ocean"></button><button class="swatch" type="button" data-pick="forest"></button><button class="swatch" type="button" data-pick="plum"></button><button class="swatch" type="button" data-pick="night"></button></div><button class="btn ui-toggle" id="uiToggle" type="button">EN</button></div>
     </header>
 
     <div class="layout">
@@ -51,6 +51,8 @@
           </section>
         </div>
 
+        <section class="exercise-card panel" id="exercises" aria-labelledby="exTitle"><div class="card-header"><div><b id="exTitle"></b><small id="exSub"></small></div><span class="run-state" id="exScore"></span></div><div id="exBody"></div></section>
+
         <section class="flow-strip">
           <div class="flow-copy"><div><b>حوّل الدرس إلى فكرة مشهد</b><small>برومبت مرتب تقدر تنسخه إلى Google Flow</small></div></div>
           <button class="btn btn-flow" id="flowBtn">جهّز برومبت Flow <span>↗</span></button>
@@ -62,5 +64,6 @@
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="app.js"></script>
+  <script src="extras.js"></script>
 </body>
 </html>
