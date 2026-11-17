@@ -3,22 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b0a1a">
+  <meta name="theme-color" content="#f3eee3">
+  <meta name="description" content="خُطوة: مختبر تفاعلي يشرح أساسيات البرمجة (المتغيرات، الشروط، الحلقات، الدوال، القوائم) بأمثلة Python وJavaScript ومشاهد متحركة.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%274%27 fill=%27%23b4452a%27/%3E%3Ctext x=%2716%27 y=%2725%27 font-size=%2724%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27serif%27%3E%D8%AE%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
   <title>خُطوة | مختبر أساسيات البرمجة</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#" aria-label="خطوة - الصفحة الرئيسية"><span class="brand-icon">{·}</span><span><b>خُطوة</b><small>مختبر أساسيات البرمجة</small></span></a>
-      <div class="top-meta"><span class="live-dot"></span> 8 مفاهيم · مثالان لغويان</div>
+      <a class="brand" href="#" aria-label="خطوة - الصفحة الرئيسية"><span class="brand-icon">خ</span><span><b>خُطوة</b><small>مختبر أساسيات البرمجة</small></span></a>
+      <div class="top-meta">8 مفاهيم · Python و JavaScript</div>
     </header>
 
     <div class="layout">
       <aside class="lesson-rail">
         <div class="rail-heading"><span>المسار التعليمي</span><span class="rail-count">01 — 08</span></div>
         <nav id="lessonNav" class="lesson-nav" aria-label="دروس البرمجة"></nav>
-        <div class="rail-foot"><span class="foot-glyph">◎</span><span>المفهوم البرمجي يبقى،<br>والصياغة تختلف من لغة للثانية.</span></div>
+        <div class="rail-foot"><span>المفهوم البرمجي يبقى،<br>والصياغة تختلف من لغة للثانية.</span></div>
       </aside>
 
       <main class="lesson-workspace">
@@ -31,7 +35,7 @@
           <section class="code-card panel">
             <div class="card-header"><div><b>الكود</b><small>السطر المضيء هو الخطوة الحالية</small></div><div class="language-switch" role="group" aria-label="لغة المثال"><button class="lang active" data-lang="python">Python</button><button class="lang" data-lang="js">JavaScript</button></div></div>
             <div class="editor-window"><div class="editor-bar"><span class="traffic"><i></i><i></i><i></i></span><span id="filename">lesson.py</span><span class="editor-spacer"></span><span class="editor-label">مثال تعليمي</span></div><div class="code-content" id="codeContent" dir="ltr"></div></div>
-            <div class="concept-note"><span class="note-icon">✳</span><p id="conceptNote"></p></div>
+            <div class="concept-note"><p id="conceptNote"></p></div>
             <div class="control-row">
               <button id="playBtn" class="btn btn-play">▶ <span>شغّل الحركة</span></button>
               <button id="stepBtn" class="btn btn-soft">خطوة تالية <span>⏭</span></button>
@@ -48,7 +52,7 @@
         </div>
 
         <section class="flow-strip">
-          <div class="flow-copy"><span class="flow-spark">✦</span><div><b>حوّل الدرس إلى فكرة مشهد</b><small>برومبت مرتب تقدر تنسخه إلى Google Flow</small></div></div>
+          <div class="flow-copy"><div><b>حوّل الدرس إلى فكرة مشهد</b><small>برومبت مرتب تقدر تنسخه إلى Google Flow</small></div></div>
           <button class="btn btn-flow" id="flowBtn">جهّز برومبت Flow <span>↗</span></button>
         </section>
         <section class="prompt-card" id="promptCard" hidden><div class="prompt-top"><div><b>برومبت المشهد</b><small>مبني على خطوات الدرس والقيم الحالية</small></div><button id="copyBtn" class="btn btn-soft">نسخ</button></div><pre id="promptText"></pre></section>
